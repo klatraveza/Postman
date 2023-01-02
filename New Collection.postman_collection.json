@@ -1,0 +1,1150 @@
+{
+	"info": {
+		"_postman_id": "badfed7e-b3dc-4ae6-9e3b-c2039bc3c711",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25014105"
+	},
+	"item": [
+		{
+			"name": "10-22- Automation-California-Marketing",
+			"item": [
+				{
+					"name": "New Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": {\r\n        \"fullName\": {\r\n            \"firstName\": \"Tomy\",\r\n            \"lastName\": \"Versety\"\r\n        },\r\n        \"company\": \"Tony inc.\",\r\n        \"taxInfo\": {\r\n            \"id\": null,\r\n            \"type\": null\r\n        },\r\n        \"addressLine1\": \"Main Street\",\r\n        \"addressLine2\": null,\r\n        \"street\": {\r\n            \"name\": null,\r\n            \"number\": null\r\n        },\r\n        \"city\": \"Queens\",\r\n        \"country\": \"USA\",\r\n        \"subdivision\": \"NY\",\r\n        \"zipCode\": \"1000\",\r\n        \"phoneNumber\": \"1234567890\",\r\n        \"location\": {\r\n            \"latitude\": 40.7534777,\r\n            \"longitude\": -73.8274804\r\n        }\r\n    },\r\n    \"setAsDefault\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show all address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show specific address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/def5596f-b6d4-4078-9b9c-db89e1033171",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"def5596f-b6d4-4078-9b9c-db89e1033171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change fresh request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"address\":{\r\n      \"id\":\"def5596f-b6d4-4078-9b9c-db89e1033171\",\r\n      \"fullName\":{\r\n         \"firstName\":\"Tomy\",\r\n         \"lastName\":\"Versety\"\r\n      },\r\n      \"company\":\"Tomy Versety inc.\",\r\n      \"taxInfo\":{\r\n         \"id\":null,\r\n         \"type\":null\r\n      },\r\n      \"addressLine1\":\"Main Street\",\r\n      \"addressLine2\":null,\r\n      \"street\":{\r\n         \"name\":null,\r\n         \"number\":null\r\n      },\r\n      \"city\":\"Queens\",\r\n      \"country\":\"USA\",\r\n      \"subdivision\":\"NY\",\r\n      \"zipCode\":\"1000\",\r\n      \"phoneNumber\":\"1234567890\",\r\n      \"location\":{\r\n         \"latitude\":40.7534777,\r\n         \"longitude\":-73.8274804\r\n      }\r\n   },\r\n   \"setAsDefault\":false,\r\n   \"fieldMask\":{\r\n      \"paths\":[\r\n         \"fullName.firstName\",\r\n         \"fullName.lastName\",\r\n         \"company\",\r\n         \"addressLine1\",\r\n         \"city\",\r\n         \"country\",\r\n         \"subdivision\",\r\n         \"zipCode\",\r\n         \"phoneNumber\",\r\n         \"location.latitude\",\r\n         \"location.longitude\",\r\n         \"setAsDefault\"\r\n      ]\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/def5596f-b6d4-4078-9b9c-db89e1033171",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"def5596f-b6d4-4078-9b9c-db89e1033171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the address",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/def5596f-b6d4-4078-9b9c-db89e1033171",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"def5596f-b6d4-4078-9b9c-db89e1033171"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Don't trust Slavik",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/def5596f-b6d4-4078-9b9c-db89e1033171",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"def5596f-b6d4-4078-9b9c-db89e1033171"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "4hNTdFBCJ4O4rGxfAHJj_PyCUy91wtc0YbniNElTT7Y.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIyLTEyLTI5VDIxOjQyOjAzLjE3NVoiLCJ1aWQiOiIyMzEzMmU3OS1jYzNmLTRmNWEtODg2Yi1hYzBkYWNjNmQ2ZDEiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6Ijk2MTIyMjM2LTFmZDktNGI3NS1iNjYxLWY5ZWI1Mzk0MTg0NCIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMi0xMi0zMFQwMTo0MjowMy4xNzVaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "Authorization",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "CM-with-tests",
+			"item": [
+				{
+					"name": "Create new postal address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Make sure we are geting the 200\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Let's make sure the response is fast enough\r",
+									"pm.test(\"Response time is less than 500 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"// Make sure the file is not too big\r",
+									"pm.test(\"Response time is less than 1000 B\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"//Checking the conection!\r",
+									"pm.test(\"Connection is = keep-alive\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");\r",
+									"});\r",
+									"\r",
+									"// Check if that we get the new ID\r",
+									"pm.test(\"Body has correct Keys\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"address\":{\r\n      \"fullName\":{\r\n         \"firstName\":\"Arthur\",\r\n         \"lastName\":\"Lester\"\r\n      },\r\n      \"company\":\"ArLE inc.\",\r\n      \"taxInfo\":{\r\n         \"id\":null,\r\n         \"type\":null\r\n      },\r\n      \"addressLine1\":\"55 Water Street\",\r\n      \"addressLine2\":null,\r\n      \"street\":{\r\n         \"name\":null,\r\n         \"number\":null\r\n      },\r\n      \"city\":\"New York\",\r\n      \"country\":\"USA\",\r\n      \"subdivision\":\"NY\",\r\n      \"zipCode\":\"10041\",\r\n      \"phoneNumber\":\"9876543219\",\r\n      \"location\":{\r\n         \"latitude\":40.7034891,\r\n         \"longitude\":-74.00962899999999\r\n      }\r\n   },\r\n   \"setAsDefault\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the new address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Make sure we are geting the 200\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Let's make sure the response is fast enough\r",
+									"pm.test(\"Response time is less than 500 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"// Make sure the file is not too big\r",
+									"pm.test(\"Response time is less than 1000 B\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"//Checking the conection!\r",
+									"pm.test(\"Connection is = keep-alive\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");\r",
+									"});\r",
+									"\r",
+									"//Chek that the names are right\r",
+									"pm.test(\"Info of the Body according to key:value is right\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.address.id).to.eql(\"b69ed249-9de6-450b-80db-a549c1f2bbb7\");\r",
+									"    pm.expect(jsonData.address.fullName.firstName).to.eql(\"Arthur\");\r",
+									"    pm.expect(jsonData.address.fullName.lastName).to.eql(\"Lester\");\r",
+									"    pm.expect(jsonData.address.country).to.eql(\"USA\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/b69ed249-9de6-450b-80db-a549c1f2bbb7",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"b69ed249-9de6-450b-80db-a549c1f2bbb7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Make sure we are geting the 200\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Let's make sure the response is fast enough\r",
+									"pm.test(\"Response time is less than 500 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"// Make sure the file is not too big\r",
+									"pm.test(\"Response time is less than 1000 B\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"//Checking the conection!\r",
+									"pm.test(\"Connection is = keep-alive\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");\r",
+									"});\r",
+									"\r",
+									"//Check the body\r",
+									"pm.test(\"Info has been changed, OK\", function () {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"    pm.response.to.not.have.jsonBody(\"error\");\r",
+									"    pm.response.to.have.jsonBody({});\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"address\":{\r\n      \"id\":\"b69ed249-9de6-450b-80db-a549c1f2bbb7\",\r\n      \"fullName\":{\r\n         \"firstName\":\"Arthur\",\r\n         \"lastName\":\"Lester\"\r\n      },\r\n      \"company\":\"Lester inc.\",\r\n      \"taxInfo\":{\r\n         \"id\":null,\r\n         \"type\":null\r\n      },\r\n      \"addressLine1\":\"55 Water Street\",\r\n      \"addressLine2\":null,\r\n      \"street\":{\r\n         \"name\":null,\r\n         \"number\":null\r\n      },\r\n      \"city\":\"New York\",\r\n      \"country\":\"USA\",\r\n      \"subdivision\":\"NY\",\r\n      \"zipCode\":\"10041\",\r\n      \"phoneNumber\":\"9876543219\",\r\n      \"location\":{\r\n         \"latitude\":40.7034891,\r\n         \"longitude\":-74.00962899999999\r\n      }\r\n   },\r\n   \"setAsDefault\":false,\r\n   \"fieldMask\":{\r\n      \"paths\":[\r\n         \"fullName.firstName\",\r\n         \"fullName.lastName\",\r\n         \"company\",\r\n         \"addressLine1\",\r\n         \"city\",\r\n         \"country\",\r\n         \"subdivision\",\r\n         \"zipCode\",\r\n         \"phoneNumber\",\r\n         \"location.latitude\",\r\n         \"location.longitude\",\r\n         \"setAsDefault\"\r\n      ]\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/b69ed249-9de6-450b-80db-a549c1f2bbb7",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"b69ed249-9de6-450b-80db-a549c1f2bbb7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Make sure we are geting the 200\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Let's make sure the response is fast enough\r",
+									"pm.test(\"Response time is less than 500 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"// Make sure the file is not too big\r",
+									"pm.test(\"Response size is less than 1000 B\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"//Checking the conection!\r",
+									"pm.test(\"Connection is = keep-alive\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");\r",
+									"});\r",
+									"pm.test(\"Address has been deleted, OK\", function () {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"    pm.response.to.be.ok;\r",
+									"    pm.response.to.not.have.jsonBody(\"error\");\r",
+									"    pm.response.to.have.jsonBody({});\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/b69ed249-9de6-450b-80db-a549c1f2bbb7",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"b69ed249-9de6-450b-80db-a549c1f2bbb7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "key",
+						"value": "Authorization",
+						"type": "string"
+					},
+					{
+						"key": "value",
+						"value": "gzx7mSYbuPmBoruZjBsanwTjFf_BAdBwLXLk-6YUENM.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIyLTEyLTI4VDE3OjE1OjAxLjMwMloiLCJ1aWQiOiIyMzEzMmU3OS1jYzNmLTRmNWEtODg2Yi1hYzBkYWNjNmQ2ZDEiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6Ijk2MTIyMjM2LTFmZDktNGI3NS1iNjYxLWY5ZWI1Mzk0MTg0NCIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMi0xMi0yOFQyMToxNTowMS4zMDJaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Cheetsheet",
+			"item": [
+				{
+					"name": "Cheetsheet for testing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Info Checker\r",
+									"pm.test(\"Entire response is correct\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.address.id).to.eql(\"4a05fc67-afdf-4e02-9225-4ce2d4e50716\");\r",
+									"    pm.expect(jsonData.address.fullName.firstName).to.eql(\"Otto\");\r",
+									"    pm.expect(jsonData.address.fullName.lastName).to.eql(\"Hertz\");\r",
+									"    pm.expect(jsonData.address.country).to.eql(\"US\");\r",
+									"    pm.expect(jsonData.address.subdivision).to.eql(\"CA\");\r",
+									"    pm.expect(jsonData.address.city).to.eql(\"Sacramento\");\r",
+									"    pm.expect(jsonData.address.zipCode).to.eql(\"95000\");\r",
+									"    pm.expect(jsonData.address.phoneNumber).to.eql(\"888-888-8888\");\r",
+									"    pm.expect(jsonData.address.company).to.eql(\"Apple-888\");\r",
+									"    pm.expect(jsonData.address.addressLine1).to.eql(\"123 Main Str\");\r",
+									"    pm.expect(jsonData.address.addressLine2).to.eql(\"Apt 333\");\r",
+									"    pm.expect(jsonData.isDefaultAddress).to.eql(true);\r",
+									"});\r",
+									"// Format Checker\r",
+									"pm.test(\"Response body should be in the correct format\", function() {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.address).to.be.a('object');\r",
+									"    pm.expect(jsonData.address.id).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.fullName).to.be.a('object');\r",
+									"    pm.expect(jsonData.address.fullName.firstName).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.fullName.lastName).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.country).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.subdivision).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.city).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.zipCode).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.phoneNumber).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.addressLine1).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.addressLine2).to.be.a('string');\r",
+									"    pm.expect(jsonData.isDefaultAddress).to.be.a('boolean');\r",
+									"});\r",
+									"\r",
+									"//Cheking small responses\r",
+									"pm.test(\"Order has been deleted, OK\", function () {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"    pm.response.to.be.ok;\r",
+									"    pm.response.to.be.an('object');\r",
+									"    pm.response.to.not.have.jsonBody(\"error\");\r",
+									"    pm.response.to.have.jsonBody({});\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CA Marketing",
+			"item": [
+				{
+					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 800ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									"pm.test(\"Size of the file is less than 1000 bit\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"header is OK\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\",\"keep-alive\");\r",
+									"});\r",
+									"\r",
+									"let jsonData = pm.response.json()\r",
+									"pm.environment.set(\"ID\",jsonData.id)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.unset(\"ID\");\r",
+									"pm.environment.unset(\"COMP\");\r",
+									"pm.environment.set(\"COMP\",\"Apple\" + new Date().getTime());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": {\r\n        \"fullName\": {\r\n            \"firstName\": \"Khala\",\r\n            \"lastName\": \"Versety\"\r\n        },\r\n        \"company\": \"{{COMP}}\",\r\n        \"taxInfo\": {\r\n            \"id\": null,\r\n            \"type\": null\r\n        },\r\n        \"addressLine1\": \"Main Street\",\r\n        \"addressLine2\": null,\r\n        \"street\": {\r\n            \"name\": null,\r\n            \"number\": null\r\n        },\r\n        \"city\": \"Queens\",\r\n        \"country\": \"USA\",\r\n        \"subdivision\": \"NY\",\r\n        \"zipCode\": \"1000\",\r\n        \"phoneNumber\": \"1234567890\",\r\n        \"location\": {\r\n            \"latitude\": 40.7534777,\r\n            \"longitude\": -73.8274804\r\n        }\r\n    },\r\n    \"setAsDefault\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET NEW ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"Id is in place\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"pm.test(\"fullName is here\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"fullName\");\r",
+									"});\r",
+									"pm.test(\"company is here\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Commection type is right\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\",\"keep-alive\");\r",
+									"});\r",
+									"pm.test(\"Response body should be in the correct format\", function() {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.address).to.be.a('object');\r",
+									"    pm.expect(jsonData.address.id).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.fullName).to.be.a('object');\r",
+									"    pm.expect(jsonData.address.fullName.firstName).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.fullName.lastName).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.country).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.subdivision).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.city).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.zipCode).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.phoneNumber).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.addressLine1).to.be.a('string');\r",
+									"    pm.expect(jsonData.isDefaultAddress).to.be.a('boolean');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Changing",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.unset(\"COMP\")\r",
+									"pm.environment.set(\"COMP\", \"Google\"+ new Date().getTime())"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"{}\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"{}\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 800ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									"pm.test(\"Size of the file is less than 1000 bit\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"header is OK\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\",\"keep-alive\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"address\":{\r\n      \"id\":\"{{ID}}\",\r\n      \"fullName\":{\r\n         \"firstName\":\"Arthur\",\r\n         \"lastName\":\"Lester\"\r\n      },\r\n      \"company\":\"{{COMP}}\",\r\n      \"taxInfo\":{\r\n         \"id\":null,\r\n         \"type\":null\r\n      },\r\n      \"addressLine1\":\"55 Water Street\",\r\n      \"addressLine2\":null,\r\n      \"street\":{\r\n         \"name\":null,\r\n         \"number\":null\r\n      },\r\n      \"city\":\"New York\",\r\n      \"country\":\"USA\",\r\n      \"subdivision\":\"NY\",\r\n      \"zipCode\":\"10041\",\r\n      \"phoneNumber\":\"9876543219\",\r\n      \"location\":{\r\n         \"latitude\":40.7034891,\r\n         \"longitude\":-74.00962899999999\r\n      }\r\n   },\r\n   \"setAsDefault\":false,\r\n   \"fieldMask\":{\r\n      \"paths\":[\r\n         \"fullName.firstName\",\r\n         \"fullName.lastName\",\r\n         \"company\",\r\n         \"addressLine1\",\r\n         \"city\",\r\n         \"country\",\r\n         \"subdivision\",\r\n         \"zipCode\",\r\n         \"phoneNumber\",\r\n         \"location.latitude\",\r\n         \"location.longitude\",\r\n         \"setAsDefault\"\r\n      ]\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chek new stuff",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"Id is in place\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"pm.test(\"fullName is here\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"fullName\");\r",
+									"});\r",
+									"pm.test(\"company is here\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"company\");\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Commection type is right\", function () {\r",
+									"    pm.response.to.have.header(\"Connection\",\"keep-alive\");\r",
+									"});\r",
+									"pm.test(\"Response body should be in the correct format\", function() {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.address).to.be.a('object');\r",
+									"    pm.expect(jsonData.address.id).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.fullName).to.be.a('object');\r",
+									"    pm.expect(jsonData.address.fullName.firstName).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.fullName.lastName).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.country).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.subdivision).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.city).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.zipCode).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.phoneNumber).to.be.a('string');\r",
+									"    pm.expect(jsonData.address.addressLine1).to.be.a('string');\r",
+									"    pm.expect(jsonData.isDefaultAddress).to.be.a('boolean');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dell stuff",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"addresses",
+								"wixapps",
+								"net"
+							],
+							"path": [
+								"_api",
+								"addresses-web",
+								"v1",
+								"addresses",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "EB-iTc6hmVdX7cOcH1ZkN7c0xPvrBntwXwaAudNEJ6c.eyJpbnN0YW5jZUlkIjoiYTcxODFkMmItZmFiYy00ZjcyLWFkMjktNzZkNDA3MGQ2MWFhIiwiYXBwRGVmSWQiOiIxNGNjNTliYy1mMGI3LTE1YjgtZTFjNy04OWNlNDFkMGUwYzkiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTAxLTAxVDE3OjUwOjMxLjU5NVoiLCJ1aWQiOiIyMzEzMmU3OS1jYzNmLTRmNWEtODg2Yi1hYzBkYWNjNmQ2ZDEiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6Ijk2MTIyMjM2LTFmZDktNGI3NS1iNjYxLWY5ZWI1Mzk0MTg0NCIsImJpVG9rZW4iOiI4ZmFmOGVmZC1hZTk4LTBmMmEtMmQ2MC03NGJlNGFiZDQ5ODUiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wMS0wMVQyMTo1MDozMS41OTVaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "Authorization",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "PET STORE ADVANCED",
+			"item": [
+				{
+					"name": "Post",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.unset(\"ID\");\r",
+									"pm.environment.unset(\"PID\");\r",
+									"pm.environment.unset(\"QUANT\");\r",
+									"pm.environment.unset(\"SD\");\r",
+									"pm.environment.unset(\"STATUS\");\r",
+									"pm.environment.unset(\"COMP\");\r",
+									"\r",
+									"pm.environment.set(\"ID\", Math.floor(Math.random() * 32));\r",
+									"pm.environment.set(\"PID\", Math.floor(Math.random() * 32));\r",
+									"pm.environment.set(\"QUANT\", Math.floor(Math.random() * 32));\r",
+									"pm.environment.set(\"SD\",+ new Date());\r",
+									"\r",
+									"let statusPick = [\"placed\",\"approved\",\"delivered\"];\r",
+									"let randomStatus = statusPick [Math.floor(Math.random() * statusPick.length)];\r",
+									"pm.environment.set(\"STATUS\",randomStatus);\r",
+									"\r",
+									"let compPick = [true,false];\r",
+									"let compStatus = compPick[Math.floor(Math.random() * compPick.length)];\r",
+									"pm.environment.set(\"COMP\",compStatus);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 1000 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"Response Size is less than 1000 bites\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Current ID is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"ID\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Current Pet-ID is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.petId).to.eql(pm.environment.get(\"PID\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Current Quantity is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.quantity).to.eql(pm.environment.get(\"QUANT\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Current Status is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(pm.environment.get(\"STATUS\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Current Status complete is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.complete).to.eql(Boolean(pm.environment.get(\"COMP\")));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": {{ID}},\r\n  \"petId\": {{PID}},\r\n  \"quantity\": {{QUANT}},\r\n  \"shipDate\": {{SD}},\r\n  \"status\": \"{{STATUS}}\",\r\n  \"complete\": {{COMP}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1000 ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"Response Size is less than 1000 bites\", function () {\r",
+									"    pm.expect(pm.response.responseSize).to.be.below(1000);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response body should be in the correct format\", function() {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.be.a('number');\r",
+									"    pm.expect(jsonData.petId).to.be.a('number');\r",
+									"    pm.expect(jsonData.quantity).to.be.a('number');\r",
+									"    pm.expect(jsonData.shipDate).to.be.a('string');\r",
+									"    pm.expect(jsonData.status).to.be.a('string');\r",
+									"    pm.expect(jsonData.complete).to.be.a('boolean');\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Current ID is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"\" + pm.environment.get(\"ID\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"store",
+								"order",
+								"{{ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
